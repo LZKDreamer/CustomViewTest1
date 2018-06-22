@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         /*CustomTextView*/
         CustomTextView textView=this.findViewById(R.id.custom_text_view);
-        textView.setLineColor(Color.WHITE);
-        textView.setLineWidth(10);
+        textView.setLineColor(Color.BLUE);
+        textView.setLineWidth(8);
         /*自定义控件的自定义点击事件*/
         textView.setOnViewClickListener(new CustomTextView.OnViewClickListener() {
             @Override
@@ -37,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
 
         customViewGroupTest1.setTitleBackgroundColor(Color.YELLOW);
         customViewGroupTest1.setTitleTextColor(Color.RED);
+
+        CustomView customView=findViewById(R.id.custom_view);
+        customView.setCustomViewClickListener(new CustomView.OnCustomViewClickListener() {
+            @Override
+            public void onCustomViewClicked() {
+                Toast.makeText(MainActivity.this,"点击了继承自View的自定义View",Toast.LENGTH_LONG).show();
+            }
+        });
+        customView.setCustomBackgroundColor(Color.GREEN);
     }
 
 

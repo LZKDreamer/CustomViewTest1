@@ -9,4 +9,7 @@
         <attr name="titleTextColor" format="color"/>
         <attr name="backgroundColor" format="color"/>
     </declare-styleable>
+    <declare-styleable name="CustomView">
+        <attr name="customBackgroundColor" format="color"/>
+        </declare-styleable>
 </resources>
